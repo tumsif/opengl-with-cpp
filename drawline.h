@@ -1,4 +1,10 @@
 #include <iostream>
-#include <GL/glut.h>
 
-void displayMe();
+#ifdef __APPLE__
+#include <GLUT/glut.h>
+#else
+#include <GL/glut.h>
+#endif
+
+void renderDisplay();
+void renderTriangle();
