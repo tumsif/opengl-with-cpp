@@ -29,9 +29,8 @@ int main(int argc, char** argv)
     */
 
     glutDisplayFunc(renderDisplay); // the renderDisplay function is the rendering function imported from the display.cpp
-    // glutDisplayFunc(renderTriangle);
 
     glutMainLoop();
 
-    return 0;
+    return 1;
 }
