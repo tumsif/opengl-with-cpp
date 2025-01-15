@@ -1,3 +1,3 @@
 #/bin/bash
 
-g++ *.cpp -o main -lGL -lglut && ./main
+g++ *.cpp -o main -lGL -lGLU -lglut && ./main
