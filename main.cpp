@@ -32,6 +32,8 @@ int main(int argc, char** argv)
 
     glutReshapeFunc(resizingDisplay);
 
+    glutKeyboardFunc(processNormalKeys);
+
     glutMainLoop();
 
     return 1;

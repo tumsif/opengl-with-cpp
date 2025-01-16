@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdlib.h>
 
 #ifdef __APPLE__
 #include <GLUT/glut.h>
@@ -8,3 +9,4 @@
 
 void renderDisplay();
 void resizingDisplay(int width, int height);
+void processNormalKeys(unsigned char key, int x, int y);
