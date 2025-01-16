@@ -6,7 +6,7 @@ int main(int argc, char** argv)
     // glutInitWindowPosition(500, 300); // set the window position on the screen
     glutInitWindowPosition(-1, -1); // set the window position on the screen
 
-    glutInitWindowSize(2000, 1500); // set the window size
+    glutInitWindowSize(1800, 1800); // set the window size
 
     /*
     GLUT_RGB - sets the rgba window for allowing coloring
@@ -29,6 +29,8 @@ int main(int argc, char** argv)
     */
 
     glutDisplayFunc(renderDisplay); // the renderDisplay function is the rendering function imported from the display.cpp
+
+    glutReshapeFunc(resizingDisplay);
 
     glutMainLoop();
 

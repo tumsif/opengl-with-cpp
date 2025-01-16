@@ -7,4 +7,4 @@
 #endif
 
 void renderDisplay();
-void renderTriangle();
+void resizingDisplay(int width, int height);
