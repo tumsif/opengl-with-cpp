@@ -1,11 +1,16 @@
 #include "drawline.h"
+#include "colors.h"
+
+float red = 1.0f;
+float green = 1.0f;
+float blue = 1.0f;
 
 void renderTriangle(void)
 {
     glBegin(GL_TRIANGLES);
-        glVertex3f(-0.9, 0, 0);
-        glVertex3f(-0.55, 0.5, 0);
-        glVertex3f(-0.25, 0, 0);
+        glVertex3f(float(-2.0) , float(-2.0) , float(-5.0));
+		glVertex3f(float(2.0) , float(0.0), float(-5.0));
+		glVertex3f(float(0.0) , float(2.0) , float(-5.0));
 	glEnd();
 }
 
@@ -31,13 +36,14 @@ void renderUsingInt(void){
 void renderDisplay(void)
 {
     // clear the color buffer
-    glClear(GL_COLOR_BUFFER_BIT);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     // std::cout << "cleared color buffer" << std::endl;
 
     // render first shape rectangle
     // renderRectangle();
     // std::cout << "created a rectangle" << std::endl;
 
+    glColor3f(red, green, blue);
     // render second shape triangle
     // renderTriangle();
     // std::cout << "created a triangle" << std::endl;

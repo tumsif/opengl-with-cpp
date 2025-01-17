@@ -15,7 +15,7 @@
 */
 void resizingDisplay(int width, int height)
 {
-    std::cout << "Resizing width: " << width << ", height" << height << "\n";
+    std::cout << "Resizing width: " << width << ", height: " << height << "\n";
 
     if (height == 0)
     {

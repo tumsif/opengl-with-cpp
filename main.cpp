@@ -13,7 +13,7 @@ int main(int argc, char** argv)
     GLUT_SINGLE - creates single buffer window, use glFlush() in rendering callback
     GLUT_DOUBLE - creates double buffer window, required for smooth transition, use glutSwapBuffers(); in rendering callback
     */
-    glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE); // set the display mode
+    glutInitDisplayMode(GLUT_DEPTH | GLUT_RGBA | GLUT_DOUBLE); // set the display mode
 
     glutCreateWindow("Hello IS236"); // adds the title to the window
     /*
@@ -32,7 +32,11 @@ int main(int argc, char** argv)
 
     glutReshapeFunc(resizingDisplay);
 
+    glutIdleFunc(renderDisplay);
+
     glutKeyboardFunc(processNormalKeys);
+
+    glutSpecialFunc(processSpecialKeys);
 
     glutMainLoop();
 

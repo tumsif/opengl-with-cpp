@@ -10,3 +10,4 @@
 void renderDisplay();
 void resizingDisplay(int width, int height);
 void processNormalKeys(unsigned char key, int x, int y);
+void processSpecialKeys(int key, int x, int y);
